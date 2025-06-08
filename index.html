@@ -262,23 +262,34 @@ line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 25
   sectionTitle.onclick = () => {
     sectionTitle.style.display = "none";
     welcomeMessage.style.display = "block";
-    content.innerHTML = '<p>Click on the navigation links to load content dynamically.</p>';
+    content.innerHTML = `
+      <p style="font-size: 1.0em; color: #333; margin-bottom: 10px;">
+        "The first principle is that you must not fool yourself and you are the easiest person to fool."
+      </p>
+      <p style="font-size: 1.0em; font-weight: bold; color: #555; text-align: right;">
+        — Richard P. Feynman
+      </p>
+    `;
+    // Apply the styles
     content.style = `
       padding: 20px;
       margin: 20px;
+      font-size: 1.2em;
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.6);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       position: relative;
       z-index: 1;
       color: #000;
       min-height: 300px;
       transition: all 0.3s ease;
+      backdrop-filter: blur(1px); 
+      -webkit-backdrop-filter: blur(2px);
       overflow-y: visible;
     `;
     header.style.display = "flex";
     nav.style.display = "block";
-    footer.textContent = "© MS.";
+    footer.textContent = "©MS";
   };
 </script>
 
