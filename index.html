@@ -27,7 +27,7 @@
 }
 
 header {
-  height: 400px;
+  height: 800px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -220,7 +220,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertically center title and poem */
-    align-items: flex-start; /* Horizontally align poem to the left */
+    align-items: center; /* Horizontally center title and poem */
   }
 
   header h1 {
@@ -230,17 +230,17 @@ footer {
   }
 
   header div {
-    max-width: 50%; /* Ensure the poem doesn't stretch too much */
+    max-width: 50%; /* Limit the width of the poem to 50% of the screen */
     padding: 6px; /* Reduce padding for small screens */
-    font-size: 0.5rem; /* Smaller text size for very small screens */
+    font-size: 0.7rem; /* Smaller text size for very small screens */
     margin-top: 6px; /* Space between title and poem */
     background: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
     border-radius: 8px; /* Smaller border radius */
     color: white;
     display: flex;
-    justify-content: flex-start; /* Horizontally left */
-    align-items: center; /* Vertically center poem */
-    text-align: left; /* place the text left inside the poem */
+    justify-content: flex-start; /* Align the poem content to the left */
+    align-items: center; /* Vertically center the poem */
+    text-align: left; /* Align the text inside the poem to the left */
   }
 
   nav {
