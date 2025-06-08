@@ -27,7 +27,7 @@
 }
 
 header {
-  height: 500px;
+  height: 400px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -157,34 +157,34 @@ footer {
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
   header {
-    height: auto;
+    height: auto; /* Adjust height automatically */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     padding: 20px;
-    background-image: url('0_images/sarkar_bg.jpeg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url('0_images/sarkar_bg.jpeg'); /* Ensure the image is used */
+    background-size: cover; /* Ensure the background image covers the whole header */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Ensure the background stays in place */
   }
 
   header h1 {
-    font-size: 2.0rem;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 2.0rem; /* Adjust font size */
+    text-align: center; /* Center the title text */
+    margin-bottom: 10px; /* Add some space between title and poem */
   }
 
   header div {
     max-width: 90%;
     padding: 15px;
-    font-size: 1.0rem;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    font-size: 1.0rem; /* Adjust text size */
+    text-align: center; /* Center the poem text */
+    background: rgba(0, 0, 0, 0.5); /* Slight dark background to make text readable */
     border-radius: 12px;
     color: white;
-    margin-top: 10px;
+    margin-top: 10px; /* Add some space above the poem */
   }
 
   nav {
@@ -209,42 +209,38 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   header {
-    padding: 0;
-    background-image: url('0_images/sarkar_bg.jpeg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    padding: 10px;
+    background-image: url('0_images/sarkar_bg.jpeg'); /* Ensure the image is used */
+    background-size: cover; /* Cover the entire header */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    height: 100vh; /* Ensure header takes full height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 10px;
-    overflow: hidden;
+    justify-content: center; /* Vertically center title and poem */
+    align-items: center; /* Horizontally center title and poem */
   }
 
   header h1 {
-    font-size: 1.0rem;
-    text-align: center;
-    margin-bottom: 10px;
-    max-width: 90%;
+    font-size: 1.4rem; /* Slightly smaller font for very small screens */
+    text-align: center; /* Center the title text */
+    margin-bottom: 10px; /* Space between title and poem */
   }
 
   header div {
-    max-width: 90%;
-    padding: 8px;
-    font-size: 0.7rem;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+    max-width: 90%; /* Ensure the poem doesn't stretch too much */
+    padding: 10px;
+    font-size: 0.8rem; /* Adjust text size for small screens */
+    margin-top: 10px; /* Space between title and poem */
+    background: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
+    border-radius: 12px;
     color: white;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    margin-top: 8px;
+    justify-content: center; /* Horizontally center poem */
+    align-items: center; /* Vertically center poem */
+    text-align: center; /* Center the text inside the poem */
   }
 
   nav {
@@ -266,6 +262,62 @@ footer {
     font-size: 0.9rem;
     margin: 10px;
     padding: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    padding: 8px;
+    background-image: url('0_images/sarkar_bg.jpeg'); /* Ensure the image is used */
+    background-size: cover; /* Cover the entire header */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    height: 100vh; /* Ensure header takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center title and poem */
+    align-items: center; /* Horizontally center title and poem */
+  }
+
+  header h1 {
+    font-size: 1.2rem; /* Further reduce the title font for extremely small screens */
+    text-align: center; /* Center the title text */
+    margin-bottom: 8px; /* Space between title and poem */
+  }
+
+  header div {
+    max-width: 85%; /* Slightly reduce max-width for smaller screens */
+    padding: 8px;
+    font-size: 0.7rem; /* Adjust text size for even smaller screens */
+    margin-top: 8px; /* Space between title and poem */
+    background: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Horizontally center poem */
+    align-items: center; /* Vertically center poem */
+    text-align: center; /* Center the text inside the poem */
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 0 4px;
+  }
+
+  #welcome-message {
+    font-size: 0.7rem;
+    margin: 8px;
+    padding: 6px;
+  }
+
+  #content {
+    font-size: 0.8rem;
+    margin: 8px;
+    padding: 8px;
   }
 }
   </style>
@@ -296,9 +348,8 @@ footer {
       Into ever-widening thought and action<br>
       Into that heaven of freedom, my Father, let my country awake.
     </p>
-    <p style="text-align: right; margin-top: 30px;">- Rabindranath Tagore</p>
+    <p style="text-align: right; font-style: normal; font-weight: bold; margin: 0;"> - Rabindranath Tagore</p>
   </div>
-  
 </header>
 
 <nav>
