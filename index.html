@@ -167,6 +167,7 @@ footer {
     background-size: cover; /* Ensure the background image covers the whole header */
     background-position: center center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Ensure the background stays in place */
   }
 
   header h1 {
@@ -183,8 +184,8 @@ footer {
     background: rgba(0, 0, 0, 0.5); /* Slight dark background to make text readable */
     border-radius: 12px;
     color: white;
-  
-}
+    margin-top: 10px; /* Add some space above the poem */
+  }
 
   nav {
     padding: 8px;
@@ -215,18 +216,32 @@ footer {
     background-size: cover; /* Cover the entire header */
     background-position: center center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
+    height: 100vh; /* Ensure header takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center title and poem */
+    align-items: center; /* Horizontally center title and poem */
   }
 
   header h1 {
-    font-size: 1.6rem; /* Adjust font size for very small screens */
+    font-size: 1.4rem; /* Slightly smaller font for very small screens */
+    text-align: center; /* Center the title text */
+    margin-bottom: 10px; /* Space between title and poem */
   }
 
   header div {
-    max-width: 90%;
+    max-width: 90%; /* Ensure the poem doesn't stretch too much */
     padding: 10px;
-    font-size: 0.9rem; /* Adjust text size */
+    font-size: 0.8rem; /* Adjust text size for small screens */
+    margin-top: 10px; /* Space between title and poem */
+    background: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Horizontally center poem */
+    align-items: center; /* Vertically center poem */
+    text-align: center; /* Center the text inside the poem */
   }
-
 
   nav {
     padding: 6px;
