@@ -161,11 +161,15 @@
   border-right: 1px solid #ddd;
   overflow-y: auto;
   z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
+  text-align: center;  /* center text inside */
 }
 
-/* Sidebar image and text styling remains the same */
 #dynamic-sidebar img {
-  width: 100%;
+  width: 80%;          /* smaller than full width to leave padding */
   max-width: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
@@ -187,6 +191,14 @@
   text-decoration: none;
   color: #1a73e8;
   font-size: 15px;
+}
+
+/* Center links inside nav as well */
+#dynamic-sidebar nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #dynamic-sidebar nav a {
@@ -211,6 +223,7 @@
     margin-left: 0 !important;
   }
 }
+
 
   </style>
 </head>
