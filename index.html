@@ -220,7 +220,112 @@
 
 <footer>©MS</footer>
 
-<!-- tParticles and JS remain unchanged -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+<script>
+  window.onload = function () {
+    tsParticles.load("tsparticles", {
+      background: { color: { value: "#1a1a1a" } },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onClick: { enable: true, mode: "push" },
+          onHover: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: {
+          push: { quantity: 4 },
+          repulse: { distance: 100, duration: 0.4 }
+        }
+      },
+      particles: {
+        color: { value: ["#ff6347", "#40e0d0", "#ff8c00", "#dda0dd", "#20b2aa"] },
+        links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1 },
+        move: { direction: "none", enable: true, outModes: { default: "bounce" }, speed: 2 },
+        number: { value: 50, density: { enable: true, area: 800 } },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 2, max: 4 } }
+      },
+      detectRetina: true
+    });
+  };
+
+  const header = document.querySelector("header");
+  const nav = document.querySelector("nav");
+  const footer = document.querySelector("footer");
+  const content = document.getElementById("content");
+  const sectionTitle = document.getElementById("section-title");
+  const welcomeMessage = document.getElementById("welcome-message");
+
+  function loadSection(filename) {
+    fetch(filename)
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.text();
+      })
+      .then(html => {
+        header.style.display = "none";
+        nav.style.display = "none";
+        footer.textContent = "";
+        welcomeMessage.style.display = "none";
+        sectionTitle.style.display = "block";
+        sectionTitle.textContent = "← Back to Homepage";
+
+        content.innerHTML = html;
+        content.style.minHeight = "calc(100vh - 70px)";
+        content.style.margin = "60px 20px 60px 20px";
+        content.style.padding = "30px";
+        content.style.background = "rgba(255, 255, 255, 0.75)";
+        content.style.backdropFilter = "blur(2px)";
+        content.style.webkitBackdropFilter = "blur(2px)";
+        content.style.borderRadius = "12px";
+        content.style.boxShadow = "0 8px 24px rgba(0,0,0,0.3)";
+        content.style.color = "#000";
+        content.style.fontSize = "1.1rem";
+        content.style.overflowY = "auto";
+        content.style.position = "relative";
+        content.style.zIndex = "1";
+      })
+      .catch(error => {
+        console.error("Fetch error:", error);
+        alert("Failed to load content.");
+      });
+  }
+
+  sectionTitle.onclick = () => {
+    sectionTitle.style.display = "none";
+    welcomeMessage.style.display = "block";
+    content.innerHTML = `
+      <p style="font-size: 1.0em; color: #333; margin-bottom: 10px;">
+        "The first principle is that you must not fool yourself and you are the easiest person to fool."
+      </p>
+      <p style="font-size: 1.0em; font-weight: bold; color: #555; text-align: right;">
+        — Richard P. Feynman
+      </p>
+    `;
+    // Apply the styles
+    content.style = `
+      padding: 20px;
+      margin: 20px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+      color: #000;
+      min-height: 300px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(1px); 
+      -webkit-backdrop-filter: blur(2px);
+      overflow-y: visible;
+    `;
+    header.style.display = "flex";
+    nav.style.display = "block";
+    footer.textContent = "©MS";
+  };
+</script>
 
 </body>
 </html>
