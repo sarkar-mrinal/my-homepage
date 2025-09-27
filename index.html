@@ -147,13 +147,17 @@
 
     /* Dynamic Sidebar */
     /* Dynamic Sidebar */
+    
 #dynamic-sidebar {
-  display: none;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: fixed;
   left: 0;
   top: 0;
-  width: 20%;       /* 20% of viewport width */
-  min-width: 200px; /* optional: ensure sidebar is not too small */
+  width: 20%;
+  min-width: 200px;
   height: 100vh;
   background: #f7f7f7;
   padding: 20px;
@@ -161,12 +165,8 @@
   border-right: 1px solid #ddd;
   overflow-y: auto;
   z-index: 9999;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centers everything horizontally */
-  text-align: center;  /* center text inside */
 }
+
 
 #dynamic-sidebar img {
   width: 80%;          /* smaller than full width to leave padding */
