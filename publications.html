@@ -1,4 +1,73 @@
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - Mrinal Sarkar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    
+
+    /* Main content */
+    .main-content {
+      margin-left: 20%;     /* leave space for sidebar */
+      width: 80%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    /* Publication styles */
+    .pub-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      font-size: 17px;
+    }
+    .pub-item {
+      flex: 1 1 45%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pub-link {
+      text-decoration: underline;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    .pub-link:hover {
+      color: #1a73e8;
+    }
+    .pub-logo {
+      height: 28px;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Main content -->
+  <div class="main-content">
+
     <h2>List of Publications</h2>
     <p>To view all the articles and citation metrics, please visit:</p>
     <br>
@@ -144,3 +213,9 @@
 <ul>
   <li><sup>&dagger;</sup> Corresponding author</li>
 </ul>
+
+
+  </div>
+
+</body>
+</html>
