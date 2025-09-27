@@ -6,70 +6,157 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$']], // inline math: $...$
-        displayMath: [['$$', '$$']] // block math: $$...$$
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
       }
     };
   </script>
-  
-  <!-- MathJax script -->
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
+  <style>
+    /* Existing research styles */
+    ul {
+      font-size: 1.05em;
+      line-height: 1.9em;
+      margin-bottom: 20px;
+    }
+    .research-image {
+      max-width: 100%;
+      height: 200px;
+      width: auto;
+      float: left;
+      margin-right: 40px;
+      margin-bottom: 10px;
+    }
+    .research-image-right {
+      float: right;
+      margin-left: 10px;
+      margin-bottom: 20px;
+      max-width: 45%;
+      height: 300px;
+      width: auto;
+    }
 
-<style>
-  ul {
-    font-size: 1.05em;
-    line-height: 1.9em;
-    margin-bottom: 20px;
-  }
- 
-  .research-image {
-  max-width: 100%;
-  height: 200px;         /* to set desired height */
-  width: auto;           /* Keep aspect ratio */
-  float: left;
-  margin-right: 40px;
-  margin-bottom: 10px;
-}
+    /* Sidebar */
+    .sidebar {
+      width: 20%;
+      background: #f7f7f7;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      border-right: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .sidebar img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .sidebar h3 {
+      margin-top: 0.5em;
+      font-size: 18px;
+    }
+    .sidebar p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .sidebar a {
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 15px;
+    }
+    .sidebar nav a {
+      font-weight: bold;
+      color: #333;
+    }
+    .sidebar nav a:hover {
+      color: #1a73e8;
+    }
 
-  .research-image-right {
-  float: right;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  max-width: 45%;
-  /*height: auto;*/
-  height: 300px;         /* to set desired height */
-  width: auto;           /* Keep aspect ratio */
-}
+    /* Main content */
+    .main-content {
+      margin-left: 20%;
+      width: 80%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
 
-</style>
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
-  <h2>Research</h2>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="0_images/sarkar_dp.jpg" alt="Mrinal Sarkar">
+    <h3>Mrinal Sarkar</h3>
+    <p>Postdoctoral Research Associate<br>Institute for Theoretical Physics
+    <br>University of Heidelberg<br> Germany</p>
 
-<p>
-  My research interests lie in the fields of statistical physics, nonlinear dynamics, and quantum dynamics.
-  To be specific, these include the following:
-</p>
-<ul>
-  <li>Synchronization in many-body interacting systems</li>
-  <li>Random walks and stochastic resetting</li>
-  <li>Universality of phase transitions and critical phenomena</li>
-  <li>Critical dynamics on long-range disordered systems</li>
-  <li>Quantum dynamics on disordered media</li>
-</ul>
+    <a href="mailto:sarkar@thphys.uni-heidelberg.de">📧 Email (Official)</a> 
+    <a href="mailto:mrinalsarkarphys@gmail.com">📧 Email (Personal)</a>
+    <a href="https://arxiv.org/search/?searchtype=author&query=Sarkar%2C+M" target="_blank">arXiv</a>
+    <a href="https://scholar.google.co.in/citations?user=4jUo5toAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a href="https://orcid.org/0000-0003-3112-6530" target="_blank">ORCID</a>
+    <hr>
+    <hr>
 
-<p>
-  Beyond my primary work, I collaborate widely with both theorists and experimentalists, often developing theoretical frameworks
-  to understand physical phenomena (<a href="#GRN"">please see here</a> - <a href="#FD">here</a>). This includes providing theoretical 
-  support to experimental realization of synchronizations, applying statistical
-  physics approach to biophysics, in particular to understand <i>Gene Regulatory Networks</i> and developing a computational framework
-  to explain the behavior of the organism <i>Physurum polycephalum</i> in solving complex computational problems.
-<p>
+    <nav>
+      <a href="aboutme.html">About Me</a>
+      <a href="research.html" style="color:#1a73e8;">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="scientific_activities.html">Scientific Activities</a>
+      <a href="notebook.html">Notebook</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 
-<br><br>
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Research</h2>
+    <p>
+      My research interests lie in the fields of statistical physics, nonlinear dynamics, and quantum dynamics.
+      To be specific, these include the following:
+    </p>
+    <ul>
+      <li>Synchronization in many-body interacting systems</li>
+      <li>Random walks and stochastic resetting</li>
+      <li>Universality of phase transitions and critical phenomena</li>
+      <li>Critical dynamics on long-range disordered systems</li>
+      <li>Quantum dynamics on disordered media</li>
+    </ul>
+
+    <p>
+      Beyond my primary work, I collaborate widely with both theorists and experimentalists, often developing theoretical frameworks
+      to understand physical phenomena (<a href="#GRN">please see here</a> - <a href="#FD">here</a>). This includes providing theoretical 
+      support to experimental realization of synchronizations, applying statistical
+      physics approach to biophysics, in particular to understand <i>Gene Regulatory Networks</i> and developing a computational framework
+      to explain the behavior of the organism <i>Physurum polycephalum</i> in solving complex computational problems.
+    </p>
+
+    <br><br>
+    
 <div id="complex_spectra">
   <h3>Long-range interactions, disorder and the universality</h3>
   <img src="figures/fig2_gamma_vs_sigma.jpeg" alt="gamma vs sigma plot" class="research-image-right">
@@ -290,10 +377,11 @@
   <div style="clear: both;"></div>
 </div>
 
-
-<script>
-  window.addEventListener('load', function() {
-    MathJax.typeset();
-  });
-</script>
+    <script>
+      window.addEventListener('load', function() {
+        MathJax.typeset();
+      });
+    </script>
+  </div>
 </body>
+
