@@ -321,6 +321,11 @@ line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 25
         content.style.overflowY = "auto";
         content.style.position = "relative";
         content.style.zIndex = "1";
+        content.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+          sectionTitle.style.display = "block";
+          });
+        });
       })
       .catch(error => {
         console.error("Fetch error:", error);
