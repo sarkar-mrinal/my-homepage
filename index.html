@@ -5,194 +5,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Personal Website</title>
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    overflow-x: hidden;
-    background-color: #1a1a1a;
-    color: #000;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      overflow-x: hidden;
+      background-color: #1a1a1a;
+      color: #000;
+    }
 
-  #tsparticles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: #1a1a1a;
-  }
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: #1a1a1a;
+    }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    min-height: 400px;
-    padding: clamp(1rem, 4vw, 3rem);
-    background-image: url('0_images/sarkar_bg.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    z-index: 1;
-    width: 100%;
-    box-sizing: border-box;
-  }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      min-height: 400px;
+      padding: clamp(1rem, 4vw, 3rem);
+      background-image: url('0_images/sarkar_bg.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      z-index: 1;
+      width: 100%;
+      box-sizing: border-box;
+    }
 
-  header h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    margin-bottom: 1rem;
-    color: white;
-    max-width: 100%;
-  }
+    header h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      color: white;
+      max-width: 100%;
+    }
 
-  header div {
-    position: relative;
-    left: 10%;
-    text-align: left;
-    width: 40%;
-    min-width: 500px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 12px;
-    padding: clamp(1rem, 4vw, 2rem);
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: clamp(1rem, 2.3vw, 1.2rem);
-    line-height: 1.5;
-    color: white;
-    box-sizing: border-box;
-  }
+    header div {
+      position: relative;
+      left: 10%;
+      text-align: left;
+      width: 40%;
+      min-width: 500px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: clamp(1rem, 4vw, 2rem);
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.3vw, 1.2rem);
+      line-height: 1.5;
+      color: white;
+      box-sizing: border-box;
+    }
 
-  header .author {
-    margin-top: 1rem;
-    font-size: 0.9em;
-    text-align: right;
-    opacity: 0.8;
-  }
+    header .author {
+      margin-top: 1rem;
+      font-size: 0.9em;
+      text-align: right;
+      opacity: 0.8;
+    }
 
-  nav {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-  }
+    nav {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-  nav a {
-    color: #333;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-  #welcome-message {
-    max-width: calc(100% - 40px);
-    margin: 20px;
-    padding: 20px;
-    font-style: italic;
-    color: #222;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
-    font-size: 1.0rem;
-    line-height: 1.0;
-  }
+    #welcome-message {
+      max-width: calc(100% - 40px);
+      margin: 20px;
+      padding: 20px;
+      font-style: italic;
+      color: #222;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      font-size: 1.0rem;
+      line-height: 1.0;
+    }
 
-  #welcome-message p:last-child {
-    text-align: right;
-    font-style: normal;
-    margin-top: 30px;
-  }
+    #welcome-message p:last-child {
+      text-align: right;
+      font-style: normal;
+      margin-top: 30px;
+    }
 
-  #content {
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1;
-    color: #000;
-    min-height: 300px;
-    transition: all 0.3s ease;
-  }
+    #content {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+      color: #000;
+      min-height: 300px;
+      transition: all 0.3s ease;
+    }
 
-  footer {
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #000;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
-    font-weight: bold;
-    cursor: default;
-  }
+    footer {
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+      font-weight: bold;
+      cursor: default;
+    }
 
-  /* Back to Homepage Bar */
-  #section-title {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.85);
-    color: white;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    z-index: 9999;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  }
+    /* Dynamic Sidebar */
+    #dynamic-sidebar {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 220px;
+      height: 100vh;
+      background: #f7f7f7;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+    #dynamic-sidebar img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    #dynamic-sidebar h3 {
+      margin-top: 0.5em;
+      font-size: 18px;
+    }
+    #dynamic-sidebar p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    #dynamic-sidebar a {
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 15px;
+    }
+    #dynamic-sidebar nav a {
+      font-weight: bold;
+      color: #333;
+    }
+    #dynamic-sidebar nav a:hover {
+      color: #1a73e8;
+    }
 
-  /* Push content down when section-title is visible */
-  #section-title + #content {
-    padding-top: 70px;
-  }
-
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    header h1 { font-size: 2rem; text-align: center; margin-bottom: 10px; }
-    header div { max-width: 90%; padding: 15px; font-size: 1rem; text-align: center; }
-    nav a { font-size: 1rem; margin: 0 8px; }
-    #section-title { font-size: 1.3rem; padding: 12px 15px; }
-    #section-title + #content { padding-top: 60px; }
-  }
-
-  @media (max-width: 480px) {
-    header h1 { font-size: 1.2rem; text-align: left; margin-bottom: 10px; }
-    header div { font-size: 0.8rem; min-width: 300px; padding: 2px; text-align: left; }
-    nav a { font-size: 0.9rem; margin: 0 5px; }
-    #section-title { font-size: 1.1rem; padding: 10px 12px; }
-    #section-title + #content { padding-top: 50px; }
-  }
-
-  @media (max-width: 320px) {
-    header h1 { font-size: 1rem; margin-bottom: 6px; }
-    header div { font-size: 0.5rem; max-width: 50%; padding: 8px; }
-    nav a { font-size: 0.8rem; margin: 0 4px; }
-    #section-title { font-size: 1rem; padding: 8px 10px; }
-    #section-title + #content { padding-top: 45px; }
-  }
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      #dynamic-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      #content {
+        margin-left: 0 !important;
+      }
+    }
 
   </style>
 </head>
@@ -200,15 +209,10 @@
 
 <div id="tsparticles"></div>
 
-<div id="section-title" title="Click to return to Homepage"></div>
-
-<header style="text-align: left; position: relative; z-index: 1; padding: clamp(1rem, 4vw, 3rem); max-width: 100%; margin: auto;">
-  <h1 style="color: white; position: relative; font-family: 'Times New Roman', Times, serif; font-style: italic; font-weight: bold; font-size: clamp(1.5rem, 4vw, 2.75rem); margin-bottom: 1rem;">
-    Where the mind is without fear ...
-  </h1>
-
-  <div style="background: rgba(0, 0, 0, 0.5); border-radius: 12px; color: white; font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: clamp(1.05rem, 2.3vw, 1.20rem); line-height: 1.5; padding: clamp(1rem, 4vw, 2rem); max-width: 100%; margin: auto;">
-    <p style="margin: 0 0 1rem 0;">
+<header>
+  <h1>Where the mind is without fear ...</h1>
+  <div>
+    <p>
       Where the mind is without fear and the head is held high<br>
       Where knowledge is free<br>
       Where the world has not been broken up into fragments<br>
@@ -221,7 +225,7 @@
       Into ever-widening thought and action<br>
       Into that heaven of freedom, my Father, let my country awake.
     </p>
-    <p class="author" style="text-align: right; font-style: normal; font-weight: bold; width: fit-content; margin-left: auto; margin-top: 1rem;">– Rabindranath Tagore</p>
+    <p class="author">– Rabindranath Tagore</p>
   </div>
 </header>
 
@@ -235,29 +239,50 @@
   <a onclick="loadSection('contact.html')">Contact</a>
 </nav>
 
-<section id="welcome-message" style="max-width: calc(100% - 40px); margin: 20px; padding: 20px; font-size: 1.1em; 
-line-height: 1.5; font-style: italic; color: #222; background: rgba(255, 255, 255, 0.6);
- border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); position:
-  relative; backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(2px);">
+<section id="welcome-message">
   <p>Hello, and thank you for dropping by.</p>
   <p>This is Mrinal Sarkar, and I welcome you to my homepage. This website offers a glimpse into my academic journey. The navigation links above will guide you through different aspects of the journey.</p>
   <p>I appreciate your time and interest. Thanks again,</p>
-  <p><em style="font-size: 1.0em; font-weight: normal; color: #555;">Ciao, <br><span style="font-weight: bold;">Mrinal</span></em></p>
+  <p><em>Ciao, <br><strong>Mrinal</strong></em></p>
 </section>
 
-<div id="content" style="max-width: calc(100% - 40px); margin: 20px; padding: 20px; font-size: 1.2em; 
-line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 255, 0.6);
- border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); position:
-  relative; backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(2px);">
-  <p style="font-size: 1.0em; color: #333; margin-bottom: 10px;">"The first principle is that you must not fool yourself and you are the easiest person to fool."</p>
-  <p style="font-size: 1.0em; font-weight: bold; color: #555; text-align: right;">— Richard P. Feynman</p>
+<div id="content">
+  <p>"The first principle is that you must not fool yourself and you are the easiest person to fool."</p>
+  <p style="font-weight: bold; text-align: right;">— Richard P. Feynman</p>
 </div>
 
 <footer>©MS</footer>
 
+<!-- Dynamic Sidebar -->
+<div id="dynamic-sidebar">
+  <img src="0_images/sarkar_dp.jpg" alt="Mrinal Sarkar">
+  <h3>Mrinal Sarkar</h3>
+  <p>Postdoctoral Research Associate<br>Institute for Theoretical Physics<br>University of Heidelberg<br>Germany</p>
+
+  <a href="mailto:sarkar@thphys.uni-heidelberg.de">📧 Email (Official)</a>
+  <a href="mailto:mrinalsarkarphys@gmail.com">📧 Email (Personal)</a>
+  <a href="https://arxiv.org/search/?searchtype=author&query=Sarkar%2C+M" target="_blank">arXiv</a>
+  <a href="https://scholar.google.co.in/citations?user=4jUo5toAAAAJ&hl=en" target="_blank">Google Scholar</a>
+  <a href="https://orcid.org/0000-0003-3112-6530" target="_blank">ORCID</a>
+  <hr>
+
+  <nav>
+    <a href="#" onclick="loadSection('aboutme.html')">About Me</a>
+    <a href="#" onclick="loadSection('research.html')">Research</a>
+    <a href="#" onclick="loadSection('publications.html')">Publications</a>
+    <a href="#" onclick="loadSection('teaching.html')">Teaching</a>
+    <a href="#" onclick="loadSection('scientific_activities.html')">Scientific Activities</a>
+    <a href="#" onclick="loadSection('notebook.html')">Notebook</a>
+    <a href="#" onclick="loadSection('contact.html')">Contact</a>
+    <hr>
+    <a href="#" onclick="returnToHomepage()">← Back to Homepage</a>
+  </nav>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 
 <script>
+  // Load particles
   window.onload = function () {
     tsParticles.load("tsparticles", {
       background: { color: { value: "#1a1a1a" } },
@@ -290,8 +315,8 @@ line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 25
   const nav = document.querySelector("nav");
   const footer = document.querySelector("footer");
   const content = document.getElementById("content");
-  const sectionTitle = document.getElementById("section-title");
   const welcomeMessage = document.getElementById("welcome-message");
+  const sidebar = document.getElementById("dynamic-sidebar");
 
   function loadSection(filename) {
     fetch(filename)
@@ -302,30 +327,24 @@ line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 25
       .then(html => {
         header.style.display = "none";
         nav.style.display = "none";
-        footer.textContent = "";
         welcomeMessage.style.display = "none";
-        sectionTitle.style.display = "block";
-        sectionTitle.textContent = "← Back to Homepage";
+        footer.textContent = "";
+
+        // Show dynamic sidebar
+        sidebar.style.display = "block";
 
         content.innerHTML = html;
-        content.style.minHeight = "calc(100vh - 70px)";
-        content.style.margin = "100px 20px 60px 20px";
+        content.style.marginLeft = "240px";
         content.style.padding = "30px";
-        content.style.background = "rgba(255, 255, 255, 0.75)";
+        content.style.background = "rgba(255,255,255,0.75)";
         content.style.backdropFilter = "blur(2px)";
         content.style.webkitBackdropFilter = "blur(2px)";
         content.style.borderRadius = "12px";
         content.style.boxShadow = "0 8px 24px rgba(0,0,0,0.3)";
         content.style.color = "#000";
         content.style.fontSize = "1.1rem";
-        content.style.overflowY = "auto";
         content.style.position = "relative";
         content.style.zIndex = "1";
-        content.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-          sectionTitle.style.display = "block";
-          });
-        });
       })
       .catch(error => {
         console.error("Fetch error:", error);
@@ -333,37 +352,24 @@ line-height: 1.5; font-style: normal; color: #222; background: rgba(255, 255, 25
       });
   }
 
-  sectionTitle.onclick = () => {
-    sectionTitle.style.display = "none";
-    welcomeMessage.style.display = "block";
-    content.innerHTML = `
-      <p style="font-size: 1.0em; color: #333; margin-bottom: 10px;">
-        "The first principle is that you must not fool yourself and you are the easiest person to fool."
-      </p>
-      <p style="font-size: 1.0em; font-weight: bold; color: #555; text-align: right;">
-        — Richard P. Feynman
-      </p>
-    `;
-    content.style = `
-      padding: 20px;
-      margin: 20px;
-      font-size: 1.2em;
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.6);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      position: relative;
-      z-index: 1;
-      color: #000;
-      min-height: 300px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(1px); 
-      -webkit-backdrop-filter: blur(2px);
-      overflow-y: visible;
-    `;
+  function returnToHomepage() {
+    sidebar.style.display = "none";
     header.style.display = "flex";
     nav.style.display = "block";
+    welcomeMessage.style.display = "block";
     footer.textContent = "©MS";
-  };
+    content.innerHTML = `
+      <p>"The first principle is that you must not fool yourself and you are the easiest person to fool."</p>
+      <p style="font-weight: bold; text-align: right;">— Richard P. Feynman</p>
+    `;
+    content.style.marginLeft = "20px";
+    content.style.padding = "20px";
+    content.style.background = "rgba(255,255,255,0.9)";
+    content.style.borderRadius = "10px";
+    content.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+    content.style.backdropFilter = "blur(1px)";
+    content.style.webkitBackdropFilter = "blur(2px)";
+  }
 </script>
 
 </body>
