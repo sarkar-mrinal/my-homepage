@@ -1,94 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Mrinal Sarkar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 20%;
-      background: #f7f7f7;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-      border-right: 1px solid #ddd;
-
-      position: fixed;      /* fixed sidebar */
-      top: 0;
-      left: 0;
-      height: 100vh;        /* full height */
-      overflow-y: auto;     /* scroll inside if too tall */
-    }
-    .sidebar img {
-      width: 100%;
-      max-width: 150px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-    .sidebar h3 {
-      margin-top: 0.5em;
-      font-size: 18px;
-    }
-    .sidebar p {
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    .sidebar a {
-      display: block;
-      margin: 8px 0;
-      text-decoration: none;
-      color: #1a73e8;
-      font-size: 15px;
-    }
-    .sidebar nav a {
-      font-weight: bold;
-      color: #333;
-    }
-    .sidebar nav a:hover {
-      color: #1a73e8;
-    }
-
-    /* Main content */
-    .main-content {
-      margin-left: 20%;     /* leave space for sidebar */
-      width: 80%;
-      padding: 30px;
-      box-sizing: border-box;
-    }
-
-    /* Publication logo for sidebar links */
-    .pub-logo {
-      height: 18px;
-      vertical-align: middle;
-      margin-right: 5px;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 800px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-      }
-      .main-content {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
-
-    /* About Me existing styles */
+<!-- <h2>About Me</h2> -->
+<style>
     .about-container {
       display: flex;
       align-items: flex-start;
-      gap: 40px;
+      gap: 40px; /* To increase the space between image and text */
       margin-top: 20px;
     }
   
@@ -104,108 +19,80 @@
     }
   
     .about-text {
-      width: 60%;
-      font-size: 1.15rem;
-      line-height: 1.6;
-    }
+    width: 60%;
+    font-size: 1.15rem; /* slightly larger font */
+    line-height: 1.6; /* improves readability */
+  }
   
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
         align-items: center;
       }
+  
       .about-image-container,
       .about-text {
         width: 100%;
       }
+  
       .about-text {
         text-align: center;
       }
     }
   </style>
-</head>
-<body>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="0_images/sarkar_dp.jpg" alt="Mrinal Sarkar">
-    <h3>Mrinal Sarkar</h3>
-    <p>Postdoctoral Research Associate<br>Institute for Theoretical Physics
-    <br>University of Heidelberg<br> Germany</p>
-
-    <a href="mailto:sarkar@thphys.uni-heidelberg.de">📧 Email (Official)</a> 
-    <a href="mailto:mrinalsarkarphys@gmail.com">📧 Email (Personal)</a>
-    <a href="https://arxiv.org/search/?searchtype=author&query=Sarkar%2C+M" target="_blank">arXiv</a>
-    <a href="https://scholar.google.co.in/citations?user=4jUo5toAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a href="https://orcid.org/0000-0003-3112-6530" target="_blank">ORCID</a>
-    <hr>
-    <hr>
-
-    <nav>
-      <a href="index.html">Homepage</a>
-      <a href="aboutme.html" style="color:#1a73e8;">About Me</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="scientific_activities.html">Scientific Activities</a>
-      <a href="notebook.html">Notebook</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  
+  <h2>About me</h2>
+  <div class="about-container">
+    <img src="0_images/sarkar_dp.jpg" alt="My Photo" class="about-image">
+    
+    <div class="about-text">
+      <p>
+        I work as a postdoctoral research associate at the 
+        <a href="https://www.thphys.uni-heidelberg.de/index.php?lang=e" target="_blank">
+          Institute for Theoretical Physics, University of Heidelberg,</a> Germany.
+        I completed my M.Sc and PhD in theoretical physics from the 
+        <a href="https://www.iitm.ac.in/" target="_blank">
+          Indian Institute of Technology Madras
+        </a>, Chennai, India.
+      </p>
+    </div>
   </div>
-
-  <!-- Main content -->
-  <div class="main-content">
-
-    <h2>About me</h2>
-    <div class="about-container">
-      <img src="0_images/sarkar_dp.jpg" alt="My Photo" class="about-image">
-      
-      <div class="about-text">
-        <p>
-          I work as a postdoctoral research associate at the 
-          <a href="https://www.thphys.uni-heidelberg.de/index.php?lang=e" target="_blank">
-            Institute for Theoretical Physics, University of Heidelberg,</a> Germany.
-          I completed my M.Sc and PhD in theoretical physics from the 
-          <a href="https://www.iitm.ac.in/" target="_blank">
-            Indian Institute of Technology Madras
-          </a>, Chennai, India.
-        </p>
-      </div>
-    </div>
   
-    <h3>Professional Experience</h3>
-    <div style="display: flex; margin-bottom: 1em;">
-      <div style="min-width: 120px;"><strong>2022–Present</strong></div>
-      <div>
-        Postdoctoral Research Associate<br>
-        <a href="https://www.thphys.uni-heidelberg.de/index.php?lang=e" target="_blank">Institute for Theoretical Physics</a><br>
-        <a href="https://www.uni-heidelberg.de/en" target="_blank">University of Heidelberg</a><br>
-        Philosophenweg 19<br>
-        D-69120 Heidelberg<br>
-        Germany
-      </div>
-    </div>
-  
-    <h3>Education</h3>
-    <div style="display: flex; margin-bottom: 1em;">
-      <div style="min-width: 100px;"><strong>2013–2022</strong></div>
-      <div>
-        M.Sc.-PhD Dual Degree in Physics,<br>
-        <a href="https://www.iitm.ac.in/" target="_blank">Indian Institute of Technology Madras</a>,<br>
-        Chennai, Tamil Nadu, India
-      </div>
-    </div>
-  
-    <div style="display: flex; margin-bottom: 1em;">
-      <div style="min-width: 100px;"><strong>2010–2013</strong></div>
-      <div>
-        B.Sc. in Physics,<br>
-        <a href="https://www.maldacollege.ac.in/" target="_blank">Malda College</a>, Malda, West Bengal, India<br>
-        Affiliated to <a href="https://www.ugb.ac.in/" target="_blank">University of Gour Banga</a>
-      </div>
-    </div>
 
+<h3>Professional Experience</h3>
+
+<div style="display: flex; margin-bottom: 1em;">
+  <div style="min-width: 120px;"><strong>2022–Present</strong></div>
+  <div>
+    Postdoctoral Research Associate<br>
+    <a href="https://www.thphys.uni-heidelberg.de/index.php?lang=e" target="_blank">Institute for Theoretical Physics</a><br>
+    <a href="https://www.uni-heidelberg.de/en" target="_blank">University of Heidelberg</a><br>
+    Philosophenweg 19<br>
+    D-69120 Heidelberg<br>
+    Germany
   </div>
+</div>
 
-</body>
-</html>
+
+<h3>Education</h3>
+
+<div style="display: flex; margin-bottom: 1em;">
+  <div style="min-width: 100px;"><strong>2013–2022</strong></div>
+  <div>
+    M.Sc.-PhD Dual Degree in Physics,<br>
+    <a href="https://www.iitm.ac.in/" target="_blank">Indian Institute of Technology Madras</a>,<br>
+    Chennai, Tamil Nadu, India
+  </div>
+</div>
+
+<br><br>
+
+<div style="display: flex; margin-bottom: 1em;">
+  <div style="min-width: 100px;"><strong>2010–2013</strong></div>
+  <div>
+    B.Sc. in Physics,<br>
+    <a href="https://www.maldacollege.ac.in/" target="_blank">Malda College</a>, Malda, West Bengal, India<br>
+    Affiliated to <a href="https://www.ugb.ac.in/" target="_blank">University of Gour Banga</a>
+  </div>
+</div>
+
