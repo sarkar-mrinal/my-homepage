@@ -21,7 +21,7 @@
     .main-content {
       margin-left: 5%;     /* leave space for sidebar */
       width: 80%;
-      padding: 30px;
+      padding: 0px;
       box-sizing: border-box;
     }
 
@@ -50,13 +50,23 @@
   width: auto;           /* Keep aspect ratio */
 }
 
- /* Responsive layout */
-    @media (max-width: 800px) {
-      .main-content {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
+ @media (max-width: 800px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .research-image,
+  .research-image-right {
+    float: none;            /* stop floating beside text */
+    display: block;         /* take full row */
+    clear: both;            /* ensure text goes below */
+    margin: 0 auto 20px;    /* center image with bottom space */
+    width: 100%;            /* occupy full width of screen */
+    max-width: 100%;        /* prevent overflow */
+    height: auto;           /* keep aspect ratio */
+  }
+}
 </style>
 </head>
 
