@@ -279,6 +279,11 @@
 
 <div id="tsparticles"></div>
 
+<!-- Hamburger button for mobile -->
+<div id="hamburger" onclick="toggleSidebar()" style="display:none; cursor:pointer; padding:10px; background:#0077cc; color:white; font-weight:bold;">
+  ☰ Menu
+</div>
+
 <header style="text-align: left; position: relative; z-index: 1; padding: clamp(1rem, 4vw, 3rem); max-width: 100%; margin: auto;">
   <h1 style="color: white; position: relative; font-family: 'Times New Roman', Times, serif; font-style: italic; font-weight: bold; font-size: clamp(1.5rem, 4vw, 2.75rem); margin-bottom: 1rem;">
     Where the mind is without fear ...
@@ -326,11 +331,6 @@
 </div>
 
 <footer>©MS</footer>
-
-<!-- Hamburger button for mobile -->
-<div id="hamburger" onclick="toggleSidebar()" style="display:none; cursor:pointer; padding:10px; background:#0077cc; color:white; font-weight:bold;">
-  ☰ Menu
-</div>
 
 <!-- Dynamic Sidebar -->
 <div id="dynamic-sidebar">
@@ -446,6 +446,12 @@
       sidebar.style.display = "block";
     }
   }
+
+//   function toggleSidebar() {
+//   const sidebar = document.getElementById("dynamic-sidebar");
+//   sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";
+// }
+
 
 
   function returnToHomepage() {
