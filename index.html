@@ -205,12 +205,13 @@
     /* Responsive layout */
     @media (max-width: 800px) {
       #dynamic-sidebar {
+        display: none; /* hide sidebar initially on mobile */
         position: relative;
         width: 100%;
         height: auto;
         border-right: none;
         border-bottom: 1px solid #ddd;
-        display: none; /* hide sidebar initially on mobile */
+       
       }
       #hamburger {
         display: block;
@@ -302,6 +303,7 @@
 </header>
 
 <nav>
+  <a onclick="loadSection('index.html')">Homepage</a>
   <a onclick="loadSection('aboutme.html')">About me</a>
   <a onclick="loadSection('research.html')">Research</a>
   <a onclick="loadSection('publications.html')">Publications</a> 
@@ -425,7 +427,8 @@
       });
   }
 
-  function toggleSidebar() {
+
+function toggleSidebar() {
   const nav = document.querySelector("nav");
   const display = window.getComputedStyle(nav).display;
   nav.style.display = (display === "none") ? "flex" : "none";
