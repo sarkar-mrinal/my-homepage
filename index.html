@@ -54,21 +54,21 @@
     }
 
     header div {
-      position: relative;
-      left: 10%;
-      text-align: left;
-      width: 40%;
-      min-width: 500px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
-      padding: clamp(1rem, 4vw, 2rem);
-      font-family: 'Times New Roman', Times, serif;
-      font-style: italic;
-      font-size: clamp(1rem, 2.3vw, 1.2rem);
-      line-height: 1.5;
-      color: white;
-      box-sizing: border-box;
-    }
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: clamp(1rem, 4vw, 2rem);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.3vw, 1.2rem);
+  line-height: 1.5;
+  color: white;
+  box-sizing: border-box;
+}
+
 
     header .author {
       margin-top: 1rem;
@@ -144,7 +144,6 @@
     }
 
     /* Dynamic Sidebar */
-    /* Dynamic Sidebar */
 
 #dynamic-sidebar {
   display: none; /* hidden by default */
@@ -209,7 +208,7 @@
 }
 
 /* Responsive layout */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   #dynamic-sidebar {
     position: relative;
     width: 100%;
@@ -220,7 +219,58 @@
   #content {
     margin-left: 0 !important;
   }
-}
+} */
+
+
+  @media (max-width: 800px) {
+    #dynamic-sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+    #content {
+      margin-left: 0 !important;
+    }
+  }
+
+  /* Mobile dropdown styles */
+  @media (max-width: 800px) {
+    #hamburger {
+      display: block; /* show button */
+    }
+
+    #dynamic-sidebar {
+      display: none;  /* hide sidebar initially */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #f7f7f7;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    #dynamic-sidebar nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #dynamic-sidebar nav a {
+      padding: 12px 20px;
+      width: 100%;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #content {
+      margin-left: 0 !important;
+      padding: 20px;
+    }
+  }
 
 
   </style>
@@ -228,6 +278,11 @@
 <body>
 
 <div id="tsparticles"></div>
+
+<!-- Hamburger button for mobile -->
+<div id="hamburger" onclick="toggleSidebar()" style="display:none; cursor:pointer; padding:10px; background:#0077cc; color:white; font-weight:bold;">
+  ☰ Menu
+</div>
 
 <header style="text-align: left; position: relative; z-index: 1; padding: clamp(1rem, 4vw, 3rem); max-width: 100%; margin: auto;">
   <h1 style="color: white; position: relative; font-family: 'Times New Roman', Times, serif; font-style: italic; font-weight: bold; font-size: clamp(1.5rem, 4vw, 2.75rem); margin-bottom: 1rem;">
@@ -369,13 +424,35 @@
         content.style.fontSize = "1.1rem";
         content.style.position = "relative";
         content.style.zIndex = "1";
+        // to hide sidebar on mobile after selecting a section
+      if (window.innerWidth <= 800) {
+        sidebar.style.display = "none";
+      }
         window.scrollTo({ top: 0, behavior: 'smooth' }); // to scroll to top after content is loaded
       })
       .catch(error => {
         console.error("Fetch error:", error);
         alert("Failed to load content.");
       });
+
   }
+
+
+   function toggleSidebar() {
+    const sidebar = document.getElementById("dynamic-sidebar");
+    if (sidebar.style.display === "block") {
+      sidebar.style.display = "none";
+    } else {
+      sidebar.style.display = "block";
+    }
+  }
+
+//   function toggleSidebar() {
+//   const sidebar = document.getElementById("dynamic-sidebar");
+//   sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";
+// }
+
+
 
   function returnToHomepage() {
     sidebar.style.display = "none";
