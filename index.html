@@ -236,6 +236,27 @@
         text-align: left;
         border-bottom: 1px solid #ddd;
       }
+      nav {
+        display: none; /* hide nav initially on mobile */
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 50px;   /* position below hamburger */
+        right: 10px;
+        width: 200px; /* adjust as needed */
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 10001;
+     }
+
+    nav a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
+      text-align: left;
+    }
+
       #content {
         margin-left: 0 !important;
         padding: 20px;
@@ -405,10 +426,11 @@
   }
 
   function toggleSidebar() {
-  const sidebar = document.getElementById("dynamic-sidebar");
-  const display = window.getComputedStyle(sidebar).display;
-  sidebar.style.display = (display === "none" || display === "") ? "block" : "none";
+  const nav = document.querySelector("nav");
+  const display = window.getComputedStyle(nav).display;
+  nav.style.display = (display === "none") ? "flex" : "none";
 }
+
 
 
   function returnToHomepage() {
