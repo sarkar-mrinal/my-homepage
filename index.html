@@ -216,7 +216,7 @@
         display: block;
         cursor: pointer;
         padding: 10px;
-        background: #0077cc;
+        background: #00b1cccf;
         color: white;
         font-weight: bold;
         position: fixed;
@@ -388,9 +388,9 @@
         content.style.position = "relative";
         content.style.zIndex = "1";
 
-        if (window.innerWidth <= 800) {
-          sidebar.style.display = "none";
-        }
+        // if (window.innerWidth <= 800) {
+        //   sidebar.style.display = "none";
+        // }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       })
       .catch(error => {
@@ -400,9 +400,11 @@
   }
 
   function toggleSidebar() {
-    const display = window.getComputedStyle(sidebar).display;
-    sidebar.style.display = (display === "none") ? "block" : "none";
-  }
+  const sidebar = document.getElementById("dynamic-sidebar");
+  const display = window.getComputedStyle(sidebar).display;
+  sidebar.style.display = (display === "none" || display === "") ? "block" : "none";
+}
+
 
   function returnToHomepage() {
     sidebar.style.display = "none";
