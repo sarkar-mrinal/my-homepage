@@ -487,5 +487,17 @@ function toggleSidebar() {
   }
 </script>
 
+<!-- GoatCounter: hidden visit tracking (view stats at https://mrinalsarkar.goatcounter.com) -->
+<script data-goatcounter="https://mrinalsarkar.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<!-- Public visitor count badge -->
+<script>
+  fetch('https://mrinalsarkar.goatcounter.com/counter/TOTAL.json')
+    .then(r => r.json())
+    .then(d => document.getElementById('visit-count').textContent = d.count)
+    .catch(() => document.getElementById('visit-count').textContent = 'N/A');
+</script>
+
 </body>
 </html>
