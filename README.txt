@@ -10,3 +10,14 @@ in case you need to delete the files:
 
 6. git rm README.txt index\ copy.html publications\ copy.html publications_rough.html
 7. git commit -m "Remove unwanted files"
+
+
+
+
+
+
+
+8. To know visitors' count:
+
+login to: https://mrinalsarkar.goatcounter.com
+passwd: pphd
