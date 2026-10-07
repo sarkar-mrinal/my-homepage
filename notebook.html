@@ -21,22 +21,23 @@
       margin-bottom: 3.5rem;
     }
 
-    .pdf-frame {
-      width: 100%;
-      height: 620px;
+    .notebook-img {
+      max-width: 75%;
+      height: auto;
       border: 1px solid #ddd;
       border-radius: 8px;
       display: block;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer;
     }
 
-    .pdf-fallback {
+    .img-caption {
       font-size: 0.85rem;
       color: #999;
       margin-top: 0.5rem;
     }
 
-    .pdf-fallback a {
+    .img-caption a {
       color: #007acc;
       text-decoration: none;
       font-weight: bold;
@@ -48,8 +49,8 @@
         width: 100%;
       }
 
-      .pdf-frame {
-        height: 420px;
+      .notebook-img {
+        max-width: 100%;
       }
     }
   </style>
@@ -70,13 +71,14 @@
       <h3>What I do when I do not do what I am supposed to do!!</h3>
       <p class="entry-meta">2018 &ndash; 2023 &nbsp;&middot;&nbsp; Pencil &amp; pen portraits</p>
 
-      <iframe
-        class="pdf-frame"
-        src="figures/thank_u_slide_sarkar.jpg"
-        title="Drawings 2018–2023">
-      </iframe>
-      <p class="pdf-fallback">
-        PDF not loading? <a href="figures/thank_u_slide_sarkar.pdf" target="_blank">Open in a new tab ↗</a>
+      <a href="figures/thank_u_slide_sarkar.pdf" target="_blank">
+        <img
+          class="notebook-img"
+          src="figures/thank_u_slide_sarkar.jpg"
+          alt="Pencil and pen portraits 2018–2023">
+      </a>
+      <p class="img-caption">
+        Click to open the full PDF ↗
       </p>
     </div>
 
