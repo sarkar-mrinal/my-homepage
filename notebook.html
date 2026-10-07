@@ -1,2 +1,84 @@
-<h2>Notebook</h2>
-<p>This section posts random stuff. Content will be added here.</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Notebook</title>
+
+  <style>
+    .main-content {
+      margin-left: 5%;
+      width: 80%;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .entry-meta {
+      color: #888;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin: 0.2rem 0 1.2rem 0;
+    }
+
+    .notebook-entry {
+      margin-bottom: 3.5rem;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 620px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .pdf-fallback {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 0.5rem;
+    }
+
+    .pdf-fallback a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1024px) {
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .pdf-frame {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-content">
+    <h2>Notebook</h2>
+
+    <p style="font-style: italic; line-height: 1.7; margin-bottom: 2rem; max-width: 700px;">
+      This section scribbles random stuff, sometimes handwritten notes, sometimes old drawings, sometimes just whatever I feel like sharing...
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #ccc; margin-bottom: 2.5rem;">
+
+    <!-- Entry 1 -->
+    <div class="notebook-entry">
+      <h3>What I do when I do not do what I am supposed to do!!</h3>
+      <p class="entry-meta">2018 &ndash; 2023 &nbsp;&middot;&nbsp; Pencil &amp; pen portraits</p>
+
+      <iframe
+        class="pdf-frame"
+        src="figures/thank_u_slide_sarkar.pdf"
+        title="Drawings 2018–2023">
+      </iframe>
+      <p class="pdf-fallback">
+        PDF not loading? <a href="figures/thank_u_slide_sarkar.pdf" target="_blank">Open in a new tab ↗</a>
+      </p>
+    </div>
+
+  </div>
+</body>
